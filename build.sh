@@ -11,4 +11,6 @@ MERGERMARKET_IMAGE="mergermarket/terraform:$TERRAFORM_VERSION"
 
 docker build --build-arg terraform_image_name=${TERRAFORM_IMAGE} -t $MERGERMARKET_IMAGE .
 
+docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
+
 docker push $MERGERMARKET_IMAGE
