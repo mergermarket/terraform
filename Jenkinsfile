@@ -23,7 +23,7 @@ pipeline {
     stages {
         stage ("Deploy") {
             steps {
-                sh "./build.sh $TERRAFORM_VERSION"
+                sh "./publish.sh $TERRAFORM_VERSION"
             }
         }
     }
